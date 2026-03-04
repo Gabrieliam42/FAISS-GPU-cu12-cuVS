@@ -1,10 +1,10 @@
-# FAISS-GPUu-cuVS — Unofficial pip Wheel
+# FAISS-GPU-cuVS — Unofficial pip Wheel
 
 **FAISS 1.14.0** built from source with full GPU and NVIDIA cuVS support.
 
 This fills a gap that does not exist elsewhere:
-- `faiss-gpu-cu12` on PyPI (including 1.14.0) — GPU only, **no cuVS**
-- `faiss-gpu-cuvs` official — **conda only**, not on PyPI
+- `faiss-gpu-cu12` the one on PyPI (including 1.14.0) is GPU only, **no cuVS**
+- `faiss-gpu-cuvs` the official one is **conda only**, not on PyPI
 
 ---
 
@@ -133,3 +133,4 @@ This wheel is a self-contained pip-installable build of FAISS 1.14.0 with cuVS e
 
 FAISS is licensed under the [MIT License](https://github.com/facebookresearch/faiss/blob/main/LICENSE).
 This wheel is an unofficial build. Not affiliated with Meta or NVIDIA.
+
