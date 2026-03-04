@@ -27,10 +27,9 @@ faiss_gpu_cu12_cuvs-1.14.0-cp312-cp312-linux_x86_64.whl
 
 > **GPU Architecture Compatibility:**
 > - **SM 86 - native:** RTX 3080, RTX 3090, RTX 3090 Ti, A40
-> - **SM 89, 90 - works via PTX JIT:** RTX 4000 series, H100 (slower on first run, then cached)
+> - **SM 89, 90 - works via PTX JIT:** RTX 4000 series, H100 (cached)
 > - **SM 80 and below - will not work:** A100, RTX 2000 series, V100 and older
 >
-> To support all architectures, rebuild from source with `-DCMAKE_CUDA_ARCHITECTURES="70;75;80;86;89;90"`.
 
 ---
 
@@ -133,3 +132,4 @@ This wheel is a self-contained pip-installable build of FAISS 1.14.0 with cuVS e
 
 FAISS is licensed under the [MIT License](https://github.com/facebookresearch/faiss/blob/main/LICENSE).
 This wheel is an unofficial build. Not affiliated with Meta or NVIDIA.
+
