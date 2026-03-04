@@ -12,7 +12,7 @@ This fills a gap that does not exist elsewhere:
 ## Wheel
 
 ```
-faiss_gpu_cu12_cuvs-1.14.0-cp312-cp312-linux_x86_64.whl
+faiss_gpu_cu12_cuvs-1.14.0-cp312-cp312-manylinux_2_38_x86_64.whl
 ```
 
 | Property | Value |
@@ -57,7 +57,7 @@ sudo apt-get install - y libopenblas-dev
 ### 3. Install the wheel
 
 ```bash
-pip install faiss_gpu_cu12_cuvs-1.14.0-cp312-cp312-linux_x86_64.whl
+pip install faiss_gpu_cu12_cuvs-1.14.0-cp312-cp312-manylinux_2_38_x86_64.whl
 ```
 
 ---
