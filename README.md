@@ -1,10 +1,10 @@
-# FAISS-GPUu-cuVS — Unofficial pip Wheel
+# FAISS-GPUu-cuVS - Unofficial pip Wheel
 
 **FAISS 1.14.0** built from source with full GPU and NVIDIA cuVS support, and AVX2 CPU fallback.
 
 This fills a gap that does not exist elsewhere:
-- `faiss-gpu-cu12` on PyPI (including 1.14.0) — GPU only, **no cuVS**
-- `faiss-gpu-cuvs` official — **conda only**, not on PyPI
+- `faiss-gpu-cu12` on PyPI (including 1.14.0) - GPU only, **no cuVS**
+- `faiss-gpu-cuvs` official - **conda only**, not on PyPI
 
 ---
 
@@ -26,9 +26,9 @@ faiss_gpu_cu12_cuvs-1.14.0-cp312-cp312-linux_x86_64.whl
 | Platform | Linux x86_64 |
 
 > **GPU Architecture Compatibility:**
-> - **SM 86 — native:** RTX 3080, RTX 3090, RTX 3090 Ti, A40
-> - **SM 89, 90 — works via PTX JIT:** RTX 4000 series, H100 (slower on first run, then cached)
-> - **SM 80 and below — will not work:** A100, RTX 2000 series, V100 and older
+> - **SM 86 - native:** RTX 3080, RTX 3090, RTX 3090 Ti, A40
+> - **SM 89, 90 - works via PTX JIT:** RTX 4000 series, H100 (slower on first run, then cached)
+> - **SM 80 and below - will not work:** A100, RTX 2000 series, V100 and older
 >
 > To support all architectures, rebuild from source with `-DCMAKE_CUDA_ARCHITECTURES="70;75;80;86;89;90"`.
 
@@ -45,13 +45,13 @@ pip install \
   libraft-cu12==25.10.0 \
   rapids-logger \
   "nvidia-nvjitlink-cu12>=12.9" \
-  --extra-index-url https://pypi.nvidia.com
+  - -extra-index-url https://pypi.nvidia.com
 ```
 
 ### 2. Install system dependency
 
 ```bash
-sudo apt-get install -y libopenblas-dev
+sudo apt-get install - y libopenblas-dev
 ```
 
 ### 3. Install the wheel
