@@ -1,6 +1,6 @@
-# FAISS-GPU-cu12-cuVS
+# Facebook AI Similarity Search (FAISS) with NVIDIA's CUDA Vector Search (cuVS)
 
-Unofficial FAISS GPU + cuVS wheel build for Python 3.12 on Linux x86_64.
+It is a fusion of Facebook AI Similarity Search (FAISS) and NVIDIA's CUDA Vector Search (cuVS).
 
 PyPI project:
 
