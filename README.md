@@ -7,7 +7,7 @@ PyPI project:
 - https://pypi.org/project/faiss-gpu-cu12-cuvs/
 - https://pypi.org/project/faiss-gpu-cu12-cuvs/1.14.1.post1/
 
-This repo now contains:
+This repo also contains the exact wheel file used for this build:
 
 ```text
 wheels/faiss_gpu_cu12_cuvs-1.14.1.post1-cp312-cp312-manylinux_2_38_x86_64.whl
@@ -64,26 +64,33 @@ For older glibc baselines, this exact wheel is not the right artifact.
 
 ## Files
 
-- Wheel: [wheels/faiss_gpu_cu12_cuvs-1.14.1.post1-cp312-cp312-manylinux_2_38_x86_64.whl](wheels/faiss_gpu_cu12_cuvs-1.14.1.post1-cp312-cp312-manylinux_2_38_x86_64.whl)
+- Wheel in this repo: [wheels/faiss_gpu_cu12_cuvs-1.14.1.post1-cp312-cp312-manylinux_2_38_x86_64.whl](wheels/faiss_gpu_cu12_cuvs-1.14.1.post1-cp312-cp312-manylinux_2_38_x86_64.whl)
 - PyPI release page: https://pypi.org/project/faiss-gpu-cu12-cuvs/1.14.1.post1/
 
 ## Installation
 
-Install into a Python 3.12 Linux environment:
+Install into a Python 3.12 Linux environment.
 
-From PyPI:
+Recommended: install from PyPI by package name:
 
 ```bash
 pip install --extra-index-url https://pypi.nvidia.com \
   faiss-gpu-cu12-cuvs==1.14.1.post1
 ```
 
-From the checked-in wheel:
+Alternative: install from the wheel checked into this repo:
 
 ```bash
 pip install --extra-index-url https://pypi.nvidia.com \
   ./wheels/faiss_gpu_cu12_cuvs-1.14.1.post1-cp312-cp312-manylinux_2_38_x86_64.whl
 ```
+
+Important:
+
+- `faiss-gpu-cu12-cuvs` is published on PyPI.
+- `https://pypi.nvidia.com` is only included so `pip` can resolve NVIDIA/RAPIDS dependencies such as `libcuvs-cu12`, `libraft-cu12`, `librmm-cu12`, and related CUDA-side packages.
+- This FAISS wheel itself is not hosted on NVIDIA's package index.
+- Do not use the human-facing PyPI project page URL as the install target; use the package name, the local wheel, or a direct wheel URL.
 
 If you want the exact CUDA-side dependency line aligned with the validated build, install these first:
 
