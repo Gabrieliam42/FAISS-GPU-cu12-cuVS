@@ -2,6 +2,11 @@
 
 Unofficial FAISS GPU + cuVS wheel build for Python 3.12 on Linux x86_64.
 
+PyPI project:
+
+- https://pypi.org/project/faiss-gpu-cu12-cuvs/
+- https://pypi.org/project/faiss-gpu-cu12-cuvs/1.14.1.post1/
+
 This repo now contains:
 
 ```text
@@ -60,10 +65,20 @@ For older glibc baselines, this exact wheel is not the right artifact.
 ## Files
 
 - Wheel: [wheels/faiss_gpu_cu12_cuvs-1.14.1.post1-cp312-cp312-manylinux_2_38_x86_64.whl](wheels/faiss_gpu_cu12_cuvs-1.14.1.post1-cp312-cp312-manylinux_2_38_x86_64.whl)
+- PyPI release page: https://pypi.org/project/faiss-gpu-cu12-cuvs/1.14.1.post1/
 
 ## Installation
 
 Install into a Python 3.12 Linux environment:
+
+From PyPI:
+
+```bash
+pip install --extra-index-url https://pypi.nvidia.com \
+  faiss-gpu-cu12-cuvs==1.14.1.post1
+```
+
+From the checked-in wheel:
 
 ```bash
 pip install --extra-index-url https://pypi.nvidia.com \
