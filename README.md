@@ -23,10 +23,10 @@ wheels/faiss_gpu_cu12_cuvs-1.14.1.post1-cp312-cp312-manylinux_2_38_x86_64.whl
 | FAISS version | `1.14.1` |
 | Python | `3.12` |
 | CUDA toolkit used for build | `12.9.1` |
-| cuVS | enabled |
+| GPU backend | `CUDA + cuBLAS + cuVS` |
 | RAPIDS cuVS runtime line | `25.10.0` |
 | GPU target | `sm_86` Ampere native build |
-| BLAS | OpenBLAS |
+| CPU BLAS backend | `OpenBLAS` |
 | Platform | Linux x86_64 / WSL2 |
 
 ## Verified Stack
@@ -88,7 +88,7 @@ pip install --extra-index-url https://pypi.nvidia.com \
 Important:
 
 - `faiss-gpu-cu12-cuvs` is published on PyPI.
-- `https://pypi.nvidia.com` is only included so `pip` can resolve NVIDIA/RAPIDS dependencies such as `libcuvs-cu12`, `libraft-cu12`, `librmm-cu12`, and related CUDA-side packages.
+- `https://pypi.nvidia.com` is only included so `pip` can resolve NVIDIA/RAPIDS dependencies such as `libcuvs-cu12`, `libraft-cu12`, `librmm-cu12`, `nvidia-cublas-cu12`, and related CUDA-side packages.
 - This FAISS wheel itself is not hosted on NVIDIA's package index.
 - Do not use the human-facing PyPI project page URL as the install target; use the package name, the local wheel, or a direct wheel URL.
 
@@ -152,6 +152,7 @@ print(D)
 
 - This is an unofficial wheel build, not an official Meta or NVIDIA distribution.
 - The wheel includes cuVS-enabled FAISS support, which is the point of this repo.
+- `OpenBLAS` is the CPU BLAS backend linked into FAISS; the GPU path uses CUDA libraries including `cuBLAS`.
 - The build target is Ampere `sm_86`; newer architectures may work if the runtime path is compatible, but this repo is documenting the validated build, not claiming universal GPU coverage.
 
 ## License
